@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import ShoppingInput from './components/ShoppingInput';
 import ShoppingList from './components/ShoppingList';
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { v4 as uuidv4 } from 'uuid';
 
+import '../src/App.css';
+
 
 class App extends Component {
-  state={
+  state = {
     items:[],
     id: uuidv4(),
     item: '',
@@ -38,6 +41,19 @@ class App extends Component {
     });
   };
 
+  componentDidUpdate() {
+    localStorage.setItem('itemsStorage', JSON.stringify(this.state.items));
+  }
+
+  componentDidMount() {
+    const itemsStorage = JSON.parse(localStorage.getItem('itemsStorage'));
+    
+    if(itemsStorage !== null) {
+      this.setState({ items: itemsStorage });
+    }
+  }
+
+
   clearList = () => {
     this.setState({
       items: []
@@ -65,14 +81,14 @@ class App extends Component {
       editItem: true,
       id: id
     })
-  }
+  } 
 
   render() {
-    return (
+    return (      
       <div className="container">
         <div className="row">
           <div className="col-10 mx-auto col-md-8 mt-4">
-            <h3 className="text-capitalize text-center">
+            <h3 className="text-capitalize text-center text-dark">
               Shopping List Input
             </h3>
             <ShoppingInput 

@@ -7,7 +7,7 @@ export default class ShoppingList extends Component {
 
         return (
             <ul className="list-group my-5">
-                <h3 className="text-capitalize text-center">Shopping List</h3>
+                <h3 className="text-capitalize text-center text-dark">Shopping List</h3>
                 {items.map(item => {
                     return (
                         <ShoppingItem 
@@ -21,7 +21,7 @@ export default class ShoppingList extends Component {
                 
                 <button 
                     type="button" 
-                    className="btn btn-danger text-capitalize mt-5"
+                    className="btn btn-danger text-capitalize mt-5 font-weight-bold"
                     onClick={clearList}
                 >
                     Clear List

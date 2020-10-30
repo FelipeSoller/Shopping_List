@@ -6,10 +6,10 @@ export default class ShoppingItem extends Component {
         const { title, handleDelete, handleEdit } = this.props
 
         return (
-            <li className="list-group-item text-capitalize d-flex justify-content-between my-2 border">
+            <li className="list-group-item text-capitalize d-flex justify-content-between my-2 border text-dark">
                 <h6>{title}</h6>
                 <div className="shopping-icon">
-                    <span className="mx-2 text-warning" onClick={handleEdit}>
+                    <span className="mx-2 text-primary" onClick={handleEdit}>
                         <i><FaPencilAlt /></i>                        
                     </span>
                     <span className="mx-2 text-danger" onClick={handleDelete} >                        
