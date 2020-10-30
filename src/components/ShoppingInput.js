@@ -3,7 +3,7 @@ import { FaBook } from 'react-icons/fa';
 
 export default class ShoppingInput extends Component {
     render() {
-        const { item, handleChange, handleSubmit } = this.props;
+        const { item, handleChange, handleSubmit, editItem } = this.props;
 
         return (
             <div className="card card-body my-3">
@@ -24,9 +24,13 @@ export default class ShoppingInput extends Component {
                     </div>
                     <button 
                         type="submit" 
-                        className="btn btn-block btn-success mt-3"
+                        className={
+                            editItem 
+                            ? "btn btn-block btn-primary mt-3" 
+                            : "btn btn-block btn-success mt-3"
+                        }
                     >
-                        Add Item
+                        {editItem ? 'Edit Item' : 'Add Item'}               
                     </button>
                 </form>
             </div>
