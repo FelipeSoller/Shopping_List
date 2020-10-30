@@ -25,7 +25,7 @@ class App extends Component {
 
     const newItem = {
       id: this.state.id,
-      item: this.state.item      
+      title: this.state.item      
     };
 
     console.log(newItem);
@@ -53,7 +53,7 @@ class App extends Component {
               handleChange={this.handleChange}
               handleSubmit={this.handleSubmit} 
             />
-            <ShoppingList />
+            <ShoppingList items={this.state.items}/>
           </div>
         </div>
       </div>      
