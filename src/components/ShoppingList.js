@@ -3,13 +3,19 @@ import ShoppingItem from './ShoppingItem';
 
 export default class ShoppingList extends Component {
     render() {
-        const { items, clearList } = this.props;
+        const { items, clearList, handleDelete } = this.props;
 
         return (
             <ul className="list-group my-5">
                 <h3 className="text-capitalize text-center">Shopping List</h3>
                 {items.map(item => {
-                    return <ShoppingItem key={item.id} title={item.title} />;                        
+                    return (
+                        <ShoppingItem 
+                            key={item.id} 
+                            title={item.title}
+                            handleDelete={() => handleDelete(item.id)}
+                        />
+                    );                        
                 })}
                 
                 <button 

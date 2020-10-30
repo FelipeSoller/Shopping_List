@@ -3,7 +3,7 @@ import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 
 export default class ShoppingItem extends Component {
     render() {
-        const { title } = this.props
+        const { title, handleDelete } = this.props
 
         return (
             <li className="list-group-item text-capitalize d-flex justify-content-between my-2 border">
@@ -12,7 +12,7 @@ export default class ShoppingItem extends Component {
                     <span className="mx-2 text-warning">
                         <i><FaPencilAlt /></i>                        
                     </span>
-                    <span className="mx-2 text-danger">                        
+                    <span className="mx-2 text-danger" onClick={handleDelete} >                        
                         <i><FaTrashAlt /></i>
                     </span>
                 </div>
