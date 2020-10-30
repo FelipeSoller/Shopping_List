@@ -3,7 +3,7 @@ import ShoppingItem from './ShoppingItem';
 
 export default class ShoppingList extends Component {
     render() {
-        const { items } = this.props;
+        const { items, clearList } = this.props;
 
         return (
             <ul className="list-group my-5">
@@ -15,6 +15,7 @@ export default class ShoppingList extends Component {
                 <button 
                     type="button" 
                     className="btn btn-danger text-capitalize mt-5"
+                    onClick={clearList}
                 >
                     Clear List
                 </button>

@@ -28,8 +28,6 @@ class App extends Component {
       title: this.state.item      
     };
 
-    console.log(newItem);
-
     const updateItems = [...this.state.items, newItem];
 
     this.setState({
@@ -39,6 +37,14 @@ class App extends Component {
       editItem: false
     });
   };
+
+  clearList = () => {
+    this.setState({
+      items: []
+    });
+  };
+
+  
 
   render() {
     return (
@@ -53,7 +59,7 @@ class App extends Component {
               handleChange={this.handleChange}
               handleSubmit={this.handleSubmit} 
             />
-            <ShoppingList items={this.state.items}/>
+            <ShoppingList items={this.state.items} clearList={this.clearList} />
           </div>
         </div>
       </div>      
