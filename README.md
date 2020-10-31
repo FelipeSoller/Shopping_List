@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://github.com/FelipeSoller/Shopping_List/blob/main/Shopping%20List.PNG" width="400px" alt="Tela do Shopping List">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+:black_nib: Shopping List :black_nib: <br>
+  O Shopping List, foi um desafio realização para participar da seleção para uma vaga de desenvolvedor front end!
+  O Aplicativo web foi realizado em React.JS
+</h3>
 
-## Available Scripts
+## :bookmark_tabs: Índice
 
-In the project directory, you can run:
+- [Sobre](#sobre)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Versão WEB](#versao-web)
 
-### `yarn start`
+<a id="sobre"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :bookmark: Sobre
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O Aplicativo web consiste numa ferramenta para criação de uma lista de compras, onde é possível realizar alteração de cada item separadamente ou até mesmo apaga-lo.
+Possui um botão "clear list", onde é possível apagar toda a lista de uma vez.
+Possui um botão "print list", onde abirá uma pagina separada contendo a lista de compras para impressao.
 
-### `yarn test`
+<a id="tecnologias-utilizadas"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :rocket: Tecnologias Utilizadas
 
-### `yarn build`
+O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ReactJS](https://reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [Bootstrap](https://getbootstrap.com/)
+- [UUID](https://www.npmjs.com/package/uuid)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a id="versao-web"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :computer: WEB
 
-### `yarn eject`
+<h1 align="center">
+    <img alt="gif do aplicativo web em funcionamento" src="https://github.com/FelipeSoller/Shopping_List/blob/main/Shopping%20List.gif" width="800px">
+</h1>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :chart_with_upwards_trend: Lições aprendidas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Conceitos do React.JS (JSX, Componentes, Propridades, Estado, SPAs - Single Page Application);
+- Criação de estilos globais;
+- Conceito de ID único através da librarie UUID;
+- Criação de componentes comuns;
+- Estruturação do App Web;
+- Utilização do Framework Bootstrap para estilização do App Web.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :memo: Licença
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h4 align="center">
+    Desenvolvido por <a href="https://www.linkedin.com/in/felipesoller/" target="_blank">Felipe Soller</a>
+</h4>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
