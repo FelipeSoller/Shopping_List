@@ -14,12 +14,26 @@ class App extends Component {
     items:[],
     id: uuidv4(),
     item: '',
+    quantity: '',
+    unit: '',
     editItem: false    
   };
 
-  handleChange = event => {
+  handleChangeItem = event => {
     this.setState({
       item: event.target.value
+    });
+  };
+
+  handleChangeQuantity = event => {
+    this.setState({
+      quantity: event.target.value
+    });
+  };
+
+  handleChangeUnit = event => {
+    this.setState({
+      unit: event.target.value
     });
   };
 
@@ -28,7 +42,9 @@ class App extends Component {
 
     const newItem = {
       id: this.state.id,
-      title: this.state.item      
+      title: this.state.item,
+      realQuantity: this.state.quantity,
+      realUnit: this.state.unit     
     };
 
     const updateItems = [...this.state.items, newItem];
@@ -36,6 +52,8 @@ class App extends Component {
     this.setState({
       items: updateItems,
       item: '',
+      quantity: '',
+      unit: '',
       id: uuidv4(),
       editItem: false
     });
@@ -73,11 +91,11 @@ class App extends Component {
 
     const selectedItem = this.state.items.find(item => item.id === id)
 
-    console.log(selectedItem);
-
     this.setState({
       items: filteredItems,
       item: selectedItem.title,
+      quantity: selectedItem.realQuantity,
+      unit: selectedItem.realUnity,
       editItem: true,
       id: id
     })
@@ -91,14 +109,20 @@ class App extends Component {
             <h3 className="text-capitalize text-center text-dark">
               Shopping List Input
             </h3>
-            <ShoppingInput 
-              item={this.state.item} 
-              handleChange={this.handleChange}
+            <ShoppingInput              
+              item={this.state.item}
+              quantity={this.state.quantity}
+              unit={this.state.unit}
+              handleChangeItem={this.handleChangeItem}
+              handleChangeQuantity={this.handleChangeQuantity}
+              handleChangeUnit={this.handleChangeUnit}
               handleSubmit={this.handleSubmit}
               editItem={this.state.editItem}
             />
             <ShoppingList 
-              items={this.state.items} 
+              items={this.state.items}
+              quantity={this.state.quantity} 
+              unit={this.state.unit} 
               clearList={this.clearList} 
               handleDelete={this.handleDelete} 
               handleEdit={this.handleEdit} 

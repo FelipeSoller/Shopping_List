@@ -3,30 +3,53 @@ import { FaBook } from 'react-icons/fa';
 
 export default class ShoppingInput extends Component {
     render() {
-        const { item, handleChange, handleSubmit, editItem } = this.props;
+        const { item, quantity, unit, handleChangeItem, handleChangeQuantity, handleChangeUnit, handleSubmit, editItem } = this.props;
 
         return (
             <div className="card card-body my-3">
-                <form onSubmit={handleSubmit}>
-                    <div className="input-group">
-                        <div className="input-group-prepend">
+                <form onSubmit={handleSubmit}>                                        
+                    <div className="row m-0">
+                        <div className="icon p-0 col-1">
                             <div className={
                                 editItem 
-                                ? "input-group-text bg-primary text-white font-weight-bold"
-                                : "input-group-text bg-success text-white font-weight-bold"
+                                ? "input-group-text px-2 bg-primary text-white font-weight-bold"
+                                : "input-group-text px-2 bg-success text-white font-weight-bold"
                              }>
-                                <i><FaBook /></i>
+                                <i className="mx-auto"><FaBook /></i>
                             </div>
                         </div>
-                        <input 
-                            type="text" 
-                            required
-                            className="form-control text-capitalize" 
-                            placeholder="Add an item to your list"
-                            value={item}
-                            onChange={handleChange}
-                        />              
+                        <div className="input p-0  col-5">
+                            <input 
+                                type="text" 
+                                required
+                                className="form-control" 
+                                placeholder="Add an item"
+                                value={item}
+                                onChange={handleChangeItem}
+                            /> 
+                        </div>             
+                        <div className="quantity p-0  col-4">                        
+                            <input 
+                                type="text" 
+                                required
+                                className="form-control" 
+                                placeholder="Add the quantity"
+                                value={quantity}
+                                onChange={handleChangeQuantity}
+                            />              
+                        </div>
+                        <div className="unit p-0  col-2">            
+                            <input 
+                                type="text" 
+                                required
+                                className="form-control" 
+                                placeholder="Unit"
+                                value={unit}
+                                onChange={handleChangeUnit}
+                            />             
+                        </div>
                     </div>
+                    
                     <button 
                         type="submit" 
                         className={

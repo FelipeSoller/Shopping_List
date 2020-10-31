@@ -11,8 +11,10 @@ export default class ShoppingList extends Component {
                 {items.map(item => {
                     return (
                         <ShoppingItem 
-                            key={item.id} 
+                            key={item.id}
                             title={item.title}
+                            realQuantity={item.realQuantity}
+                            realUnit={item.realUnit}
                             handleDelete={() => handleDelete(item.id)}
                             handleEdit={() => handleEdit(item.id)}
                         />
