@@ -18,10 +18,11 @@ export default class ShoppingInput extends Component {
                                 <i className="mx-auto"><FaBook /></i>
                             </div>
                         </div>
-                        <div className="input p-0  col-5">
+                        <div className="input p-0  col-5" autofocus>
                             <input 
                                 type="text" 
                                 required
+                                autofocus                                                             
                                 className="form-control" 
                                 placeholder="Add an item"
                                 value={item}

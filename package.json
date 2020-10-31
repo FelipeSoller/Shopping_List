@@ -11,7 +11,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-to-pdf": "0.0.13",
     "reactstrap": "^8.6.0",
     "uuid": "^8.3.1",
     "web-vitals": "^0.2.4"

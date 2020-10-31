@@ -6,7 +6,7 @@ export default class ShoppingList extends Component {
         const { items, clearList, handleDelete, handleEdit } = this.props;
 
         return (
-            <ul className="list-group my-5">
+            <ul className="list-group my-2">
                 <h3 className="text-capitalize text-center text-dark">Shopping List</h3>
                 {items.map(item => {
                     return (
